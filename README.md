@@ -24,7 +24,7 @@ python3 -Bu transmogrify.py -s example/lavender.png blossom.png | ffmpeg -f imag
 
 ## Explanation
 
-Even though this problem can be solved using genetic algorithms (as described in the reddit thread linked above), a simple mix combination of k-Means and Hill Climbing suffices to produce effective results:
+Even though this problem can be solved using genetic algorithms (as described in the reddit thread linked above), a simple combination of k-Means and Hill Climbing suffices to produce effective results:
 
 1. Compute a limited palette of `k` dominant colors using k-Means. This is basically [color quantization](https://en.wikipedia.org/wiki/Color_quantization).
 2. Fill the background of the output with the mean color. This speeds up convergence a bit.
@@ -35,6 +35,7 @@ Even though this problem can be solved using genetic algorithms (as described in
 
 1. The color quantization step is very slow on large images, so we apply it to a downscaled version of the source image if it is larger than 256x256
 2. The hill climbing is slow due to its sequential nature (Perhaps it is possible to parallelize using [Beam Search](https://en.wikipedia.org/wiki/Beam_search)?)
+3. As the level of detail increases, successive moves to lower-energy states become more difficult as the likelihood of producing energy-reducing affine transforms becomes lower and lower. 
 
 ## References
 
