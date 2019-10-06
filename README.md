@@ -2,6 +2,8 @@
 
 ![Lavender Field](https://raw.githubusercontent.com/kochab/image-approximation/master/examples/lavender.png "Lavender Field")
 
+Video: https://streamable.com/k6nkq
+
 This is another take on https://www.reddit.com/r/programming/comments/bstbki/mona_lisa_made_out_of_260_smaller_mona_lisas, using a different method.
 
 ## Synopsis
